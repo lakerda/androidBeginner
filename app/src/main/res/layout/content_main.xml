@@ -26,16 +26,13 @@
         tools:layout_alignParentRight="false" />
 
     <Button
-        android:text="Click Me!"
-        android:layout_width="wrap_content"
+        android:text="Click Meeeeeeeeeeeeeeeee!"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main_main_view"
-        android:layout_marginTop="27dp"
         android:id="@+id/main_click_button"
         android:elevation="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/main_main_view"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,18 +40,18 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:layout_below="@+id/main_click_button"
         android:id="@+id/main_main_edit"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/main_click_button"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Every Other Time"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/main_main_other"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_below="@+id/main_main_edit"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
 
 </RelativeLayout>

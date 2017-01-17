@@ -16,8 +16,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -26,38 +29,38 @@ public class MainActivity extends AppCompatActivity {
 
     private void setViews(){
 
-        final TextView mainView =  (TextView) findViewById(R.id.main_main_view);
+        final TextView mainView =  (TextView) findViewById(R.id.main_main_view);    //parantez içinde cast ediyoruz belirtiyoruz ne olduğunu
 
         final TextView otherView = (TextView) findViewById(R.id.main_main_other);
-         String text2 = "caner";
+        String text2 = "caner";
 
-         final String text2Final = text2;
-
+        final String text2Final = text2;
         Button mainButton = (Button) findViewById(R.id.main_click_button);
 
 
         //getSharedPreferences komutu eklendi
         boolean isFirstRun = getSharedPreferences("Preferences", MODE_PRIVATE).getBoolean("isFirstRun",true);
-        if(isFirstRun){
 
+        if(isFirstRun) {
 
+            mainButton.setOnClickListener(new View.OnClickListener() {
 
+                @Override
 
-        mainButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                public void onClick(View v) {
 
                 EditText mainEdit = (EditText) findViewById(R.id.main_main_edit);
                 String text = mainEdit.getText().toString();
 
 
                 mainView.setText(text);
-                getSharedPreferences("Preferences", MODE_PRIVATE).edit().putBoolean("isFirstRun",false).commit();
+                getSharedPreferences("Preferences", MODE_PRIVATE).edit().putInt("isFirstRun",3).commit();
                 //otherView.setText(text2Final);
 
             }
         });}
-        else{
+
+        else {
 
 
 
